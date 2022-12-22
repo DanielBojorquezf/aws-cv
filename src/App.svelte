@@ -30,7 +30,7 @@
       </g>
   </g>
 </svg>
-<h1>Coming soon!</h1>
+<h1>Coming soon! - DB</h1>
 
 <style>
   h1 {
