@@ -1,4 +1,4 @@
-name: ci/cd workflow
+name: testing CI/CD workflow
 
 on:
   push:
@@ -47,7 +47,7 @@ jobs:
 
       - name: Deploy to Bucket
         run:  |
-          aws s3 sync ./public/ ${{ secrets.BUCKET_NAME_UAT }} --exclude ".env" --exclude '.git*' --exclude 'package.*' --exclude '*.md' --exclude 'src' --exclude '.editorconfig' --exclude 'scripts'
+          aws s3 sync ./dist/ ${{ secrets.BUCKET_NAME_UAT }} --exclude ".env" --exclude '.git*' --exclude 'package.*' --exclude '*.md' --exclude 'src' --exclude '.editorconfig' --exclude 'scripts'
 
       - name: Invalidate CloudFront
         uses: chetan/invalidate-cloudfront-action@v2
