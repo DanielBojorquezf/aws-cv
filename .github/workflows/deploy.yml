@@ -31,4 +31,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         host: ${{ secrets.SSH_HOST }}
         username: 'root'
-        script: 'cd /var/www/html/aws-cv && git pull && npm install && npm run build'
+        script: 'cd /var/www/html/aws-cv && sh deploy.sh'
